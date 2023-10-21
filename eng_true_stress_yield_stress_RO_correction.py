@@ -65,14 +65,14 @@ fle = pd.read_csv(f'{pth}\AL-6061-T6.TXT',skiprows = 4,sep='\t')
 #### Load vs Displacment
 displacement = fle.iloc[0:480,0] # in inch
 load = fle.iloc[0:480,2] # in lb
-# plt.plot(displacement,load,linewidth = 3,color='C3')
-# plt.xlim(0,0.10)
-# plt.ylim(0,3500)
-# plt.xlabel(r'Displacement ($in)$')
-# plt.ylabel(r'Load ($lb)$')
-# plt.legend(['Load'], frameon=False,loc = 'upper right')
-# plt.savefig(f'{pth}\load_displacemnt_plot.png')
-# plt.close()
+plt.plot(displacement,load,linewidth = 3,color='C3')
+plt.xlim(0,0.10)
+plt.ylim(0,3500)
+plt.xlabel(r'Displacement ($in)$')
+plt.ylabel(r'Load ($lb)$')
+plt.legend(['Load'], frameon=False,loc = 'upper right')
+plt.savefig(f'{pth}\load_displacemnt_plot.png')
+plt.close()
 
 #%%### Engineering stress strain
 initial_guage_length = 1 # in inch
@@ -201,18 +201,6 @@ n = 0.04
 estimated_stress = power_law(true_strain, K, n)
 R2 = r2_score(true_stress, estimated_stress)
 print(f"R^2: {R2}")
-
-# true_stress_y_fit = K*(true_plastic_strain_y)**n
-# plt.plot(true_plastic_strain_y, true_stress_y_fit, linewidth = 2,color='C2')
-# plt.xscale('log')
-# plt.yscale('log')
-# plt.xlim(0.0001,0.10)
-# plt.ylim(-100,100)
-
-# plt.xlabel(r'True Plastic Strain')
-# plt.ylabel(r'True Stress ($ksi)$')
-# plt.legend(['True Stress'], frameon=False)
-# plt.show()
 
 #%% plotting True Stress vs True Plastic Strain and RO fitted
 
