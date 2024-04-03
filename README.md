@@ -1,2 +1,2 @@
 # Metal-Plasticity
-In this repository, the python scripts which deals with basic analysis of stress-strain analysis, like (a) Ramberg-Osgood Correction of the Stress-strain data and (b) Yield offset correction, Yield strength calculation, and (c) True plastic stress calculation.
+In this repository, the given Python scripts deal with basic analysis of plasticity based on a material and given stress state using J2 flow theory. More details can be found on readme.txt file for individual codes.
