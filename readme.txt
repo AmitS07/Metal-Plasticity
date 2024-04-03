@@ -19,5 +19,5 @@ Note: The user has to define to five the raw data of "load vs displacement" and 
 
 4. Code: "incremental_deformation.py" does estimate the incremental stress state at a point for given material and Hardening laws
 
-**NOTE: The user should be careful while using these codes. These codes were written for a basic given dataset. These codes do help in understanding the algorithms behind Plasticity theories**
+NOTE: The user should be careful while using these codes. These codes were written for a basic given dataset. These codes do help in understanding the algorithms behind Plasticity theories
 
